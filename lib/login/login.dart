@@ -20,7 +20,7 @@ class LoginPage extends State<LoginPageState>
     await animation.forward();
     await Future.delayed(Duration(seconds: 1));
     await animation.reverse();
-    Navigator.push(
+    await Navigator.pushAndRemoveUntil(
         context,
         PageRouteBuilder(
             pageBuilder: (_, __, ___) => LoginPageContentState(),
@@ -34,7 +34,8 @@ class LoginPage extends State<LoginPageState>
                 opacity: doubleAnimation,
                 child: child,
               );
-            }));
+            }),
+        (Route<dynamic> route) => false);
   }
 
   @override
@@ -56,9 +57,8 @@ class LoginPage extends State<LoginPageState>
             builder: (context, child) {
               return Opacity(opacity: doubleAnimation.value, child: child);
             },
-            child: Text("Your health is our priority", 
-              style: TextStyle(fontStyle: FontStyle.italic)
-            ))
+            child: Text("Your health is our priority",
+                style: TextStyle(fontStyle: FontStyle.italic)))
       ],
     )));
   }

@@ -7,6 +7,7 @@ class LoginPageContentState extends StatefulWidget {
 }
 
 class LoginPageContent extends State<LoginPageContentState> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +28,7 @@ class LoginPageContent extends State<LoginPageContentState> {
           SizedBox(height: 50),
           DefaultContainer(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextField(decoration: InputDecoration(hintText: "Username")),
               TextField(decoration: InputDecoration(hintText: "Password")),
@@ -35,13 +36,13 @@ class LoginPageContent extends State<LoginPageContentState> {
               PrimaryButton(onPressed: () {}, text: "Login"),
               SizedBox(height: 10),
               Divider(color: Colors.black),
-              Text("Dont have an account?", 
-                style: TextStyle(
-                  color: Colors.grey[500]
-                )
-              ),
+              Text("Dont have an account?",
+                  style: TextStyle(color: Colors.grey[500])),
               SizedBox(height: 10),
-              PrimaryButton(onPressed: () {}, text: "Register",)
+              PrimaryButton(
+                onPressed: () {},
+                text: "Register",
+              )
             ],
           ))
         ],
