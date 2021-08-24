@@ -7,7 +7,7 @@ class LoginPageContentState extends StatefulWidget {
 }
 
 class LoginPageContent extends State<LoginPageContentState> {
-
+  bool isLoading = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,17 +30,24 @@ class LoginPageContent extends State<LoginPageContentState> {
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TextField(decoration: InputDecoration(hintText: "Username")),
-              TextField(decoration: InputDecoration(hintText: "Password")),
-              SizedBox(height: 20),
-              PrimaryButton(onPressed: () {}, text: "Login"),
+              PrimaryTextField(hintText: "Email"),
+              PrimaryTextField(hintText: "Password", isPassword: true),
+              SizedBox(height: 10),
+              PrimaryButton(
+                  onPressed: () {
+                    setState(() => this.isLoading = !this.isLoading);
+                  },
+                  text: "Login",
+                  isLoading: this.isLoading),
               SizedBox(height: 10),
               Divider(color: Colors.black),
               Text("Dont have an account?",
-                  style: TextStyle(color: Colors.grey[500])),
+                  style: TextStyle(color: Colors.black)),
               SizedBox(height: 10),
               PrimaryButton(
-                onPressed: () {},
+                onPressed: () {
+                  setState(() => this.isLoading = !this.isLoading);
+                },
                 text: "Register",
               )
             ],

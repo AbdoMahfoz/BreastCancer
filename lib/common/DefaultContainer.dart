@@ -9,7 +9,7 @@ class DefaultContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(const Radius.circular(15)),
+          borderRadius: BorderRadius.all(const Radius.circular(25)),
           boxShadow: [
             BoxShadow(
                 color: Colors.grey.shade300, blurRadius: 2, spreadRadius: 2
