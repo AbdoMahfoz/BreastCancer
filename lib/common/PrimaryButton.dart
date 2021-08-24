@@ -15,7 +15,7 @@ class PrimaryButton extends StatefulWidget {
       this.enabled = true});
 
   @override
-  State<StatefulWidget> createState() => PrimaryButtonState();
+  PrimaryButtonState createState() => PrimaryButtonState();
 }
 
 class PrimaryButtonState extends State<PrimaryButton>

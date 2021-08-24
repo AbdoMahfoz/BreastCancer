@@ -3,11 +3,12 @@ import "../common/common.dart";
 
 class LoginPageContentState extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => LoginPageContent();
+  LoginPageContent createState() => LoginPageContent();
 }
 
 class LoginPageContent extends State<LoginPageContentState> {
   bool isLoading = false;
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

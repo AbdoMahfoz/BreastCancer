@@ -3,7 +3,7 @@ import "loginContent.dart";
 
 class LoginPageState extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => LoginPage();
+  LoginPage createState() => LoginPage();
 }
 
 class LoginPage extends State<LoginPageState>
